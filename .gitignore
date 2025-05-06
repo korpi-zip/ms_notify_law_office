@@ -1,0 +1,15 @@
+# Ignorar el archivo .env (que contiene credenciales sensibles)
+.env
+
+# Ignorar las dependencias instaladas en el entorno de Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+
+
+# Archivos temporales de tu editor
+.vscode/
+.idea/

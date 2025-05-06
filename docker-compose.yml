@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+
+  rabbitmq:
+    image: "rabbitmq:3-management"  # Imagen de RabbitMQ con la interfaz de gestión habilitada
+    ports:
+      - "5672:5672"  # Puerto de RabbitMQ para comunicación
+      - "15672:15672"  # Puerto para la UI de RabbitMQ
+    environment:
+      RABBITMQ_DEFAULT_USER: "admin"
+      RABBITMQ_DEFAULT_PASS: "admin"
+
+
+  ms_notify:
+    build:
+      context: .
+      dockerfile: Dockerfile  
+    volumes:
+      - ./app:/app  # Asegura que los archivos de 'app' estén accesibles dentro del contenedor
+    env_file:
+      - .env  # Carga las variables de entorno desde el archivo .env
+    depends_on:
+      - rabbitmq  # Dependencia del servicio RabbitMQ
+
