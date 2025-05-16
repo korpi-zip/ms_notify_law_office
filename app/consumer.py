@@ -4,9 +4,12 @@ import yagmail
 import os
 from dotenv import load_dotenv
 import time
+from jinja2 import Environment, FileSystemLoader
+
 
 # Cargar las variables de entorno del archivo .env
 load_dotenv()
+env = Environment(loader=FileSystemLoader('templates')) 
 
 # Ahora puedes acceder a las variables de entorno
 EMAIL = os.getenv("EMAIL")
@@ -46,10 +49,14 @@ def callback(ch, method, properties, body):
         print(f"  Cuerpo: {data['body']}")
 
         # Enviar el correo real
+        # Cargar la plantilla
+        template = env.get_template('notification.html')
+        html_content = template.render(subject=data['subject'], body=data['body'])
+
         yag.send(
             to=data['to'],
             subject=data['subject'],
-            contents=data['body']
+            contents=html_content,
         )
         print("✅ Correo enviado exitosamente.\n")
 

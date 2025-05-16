@@ -1,3 +1,4 @@
 pika
 yagmail
 python-dotenv
+jinja2
