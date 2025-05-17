@@ -9,6 +9,21 @@ Este microservicio está diseñado para enviar notificaciones por correo electr�
   ├── 🐍 <code>producer.py</code> │ └── 📄 <code>requirements.txt</code>
   ├── 📂 <strong>templates/</strong> │ └── 📄 <code>notification.html</code> ├── 📄 <code>.gitignore</code> ├── 🐳 <code>Dockerfile</code> ├── 🐳 <code>docker-compose.yml</code> ├── 🔐 <code>.env</code> └── 📄 <code>README.md</code> </code></pre>
 
+
+  📁 ms_notify_law_office/
+├── 📂 app/                  
+│   ├── 🐍 consumer.py       
+│   ├── 🐍 producer.py       
+│   └── 📄 requirements.txt  
+├── 📂 templates/           
+│   └── 📄 notification.html 
+├── 📄 .gitignore           
+├── 🐳 Dockerfile           
+├── 🐳 docker-compose.yml   
+├── 🔐 .env                 
+└── 📄 README.md            
+
+
 🛠️ Requisitos
 
 -Python 3.12+
