@@ -20,9 +20,7 @@ Este microservicio está diseñado para enviar notificaciones por correo electr�
 🛠️ Requisitos
 
 -Python 3.12+
-
 -Docker + Docker Compose
-
 -Cuenta de correo (Gmail, con contraseña de aplicación)
 
 🔐 Archivo .env
