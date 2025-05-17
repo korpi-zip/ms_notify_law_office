@@ -28,16 +28,19 @@ Este microservicio está diseñado para enviar notificaciones por correo electr�
 🔐 Archivo .env
 
 EMAIL=tu_correo@gmail.com
+
 PASSWORD=tu_contraseña_de_aplicacion
+
 RABBITMQ_HOST=rabbitmq
+
 RABBITMQ_PORT=5672
 
 🐳 Ejecución con Docker
 
-cd docker
 docker compose up --build -d
 
 RabbitMQ GUI en: http://localhost:15672
+
 Usuario: admin, Contraseña: admin
 
 📤 Prueba con Producer
