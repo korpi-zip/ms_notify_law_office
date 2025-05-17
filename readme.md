@@ -1,9 +1,12 @@
-📧 Microservicio de Notificaciones - Consultorio Jurídico
+# 📧 Microservicio de Notificaciones - Consultorio Jurídico
+
 Este microservicio está diseñado para enviar notificaciones por correo electrónico en eventos clave dentro de la plataforma de gestión de casos del consultorio jurídico.
 
-📦 Estructura del Proyecto
+---
 
-  📁 ms_notify_law_office/
+## 📦 Estructura del Proyecto
+
+<pre><code>📁 ms_notify_law_office/
 ├── 📂 app/                  
 │   ├── 🐍 consumer.py       
 │   ├── 🐍 producer.py       
@@ -15,60 +18,84 @@ Este microservicio está diseñado para enviar notificaciones por correo electr�
 ├── 🐳 docker-compose.yml   
 ├── 🔐 .env                 
 └── 📄 README.md            
+</code></pre>
 
+---
 
-🛠️ Requisitos
+## 🛠️ Requisitos
 
--Python 3.12+
--Docker + Docker Compose
--Cuenta de correo (Gmail, con contraseña de aplicación)
+- Python 3.12+  
+- Docker + Docker Compose  
+- Cuenta de correo (Gmail, con contraseña de aplicación)  
 
-🔐 Archivo .env
+---
 
-EMAIL=tu_correo@gmail.com
+## 🔐 Archivo <code>.env</code>
+
+<pre><code>EMAIL=tu_correo@gmail.com
 PASSWORD=tu_contraseña_de_aplicacion
 RABBITMQ_HOST=rabbitmq
 RABBITMQ_PORT=5672
+</code></pre>
 
-🚀 Guía de Instalación
-Clona el repositorio:
+---
 
-git clone https://github.com/tu_usuario/ms_notify_law_office.git
+## 🚀 Guía de Instalación
+
+1. <strong>Clona el repositorio:</strong>  
+<pre><code>git clone https://github.com/tu_usuario/ms_notify_law_office.git
 cd ms_notify_law_office
-Crea y configura el archivo .env:
-Asegúrate de incluir tus credenciales de correo y configuración de RabbitMQ.
+</code></pre>
 
+2. <strong>Crea y configura el archivo <code>.env</code>:</strong>  
+Asegúrate de incluir tus credenciales de correo y la configuración de RabbitMQ.
 
-EMAIL=tu_correo@gmail.com
+<pre><code>EMAIL=tu_correo@gmail.com
 PASSWORD=tu_contraseña_de_aplicacion
 RABBITMQ_HOST=rabbitmq
 RABBITMQ_PORT=5672
-(Opcional) Ejecuta localmente sin Docker:
-Instala dependencias y ejecuta:
+</code></pre>
 
+3. <strong>(Opcional) Ejecuta localmente sin Docker:</strong>  
+Instala las dependencias y ejecuta el consumidor manualmente.
 
-pip install -r app/requirements.txt
+<pre><code>pip install -r app/requirements.txt
 python app/consumer.py
-Verifica que tienes Docker y Docker Compose instalados:
+</code></pre>
 
-docker --version
+4. <strong>Verifica que tienes Docker y Docker Compose instalados:</strong>  
+<pre><code>docker --version
 docker compose version
+</code></pre>
 
-🐳 Ejecución con Docker
+---
 
-docker compose up --build -d
+## 🐳 Ejecución con Docker
 
-RabbitMQ GUI en: http://localhost:15672
-Usuario: admin, Contraseña: admin
+<pre><code>docker compose up --build -d
+</code></pre>
 
-📤 Prueba con Producer
+Accede a la interfaz de RabbitMQ:  
+<code>http://localhost:15672</code>  
+<strong>Usuario:</strong> admin  
+<strong>Contraseña:</strong> admin
 
-python app/producer.py
+---
 
-🧪 Pruebas
+## 📤 Prueba con Producer
 
-Por implementar (pytest, mocks).
+<pre><code>python app/producer.py
+</code></pre>
 
-📬 Contacto
+---
+
+## 🧪 Pruebas
+
+Por implementar (<code>pytest</code>, <code>mocks</code>).
+
+---
+
+## 📬 Contacto
 
 Desarrollado por estudiantes de Ingeniería de Computación - Universidad de Caldas.
+
