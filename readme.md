@@ -3,7 +3,11 @@ Este microservicio está diseñado para enviar notificaciones por correo electr�
 
 📦 Estructura del Proyecto
 
-<pre><code>📁 <strong>ms_notify_law_office/</strong> ├── 📂 <strong>app/</strong> │ ├── 🐍 <code>consumer.py</code> │ ├── 🐍 <code>producer.py</code> │ └── 📄 <code>requirements.txt</code> ├── 📂 <strong>templates/</strong> │ └── 📄 <code>notification.html</code> ├── 📄 <code>.gitignore</code> ├── 🐳 <code>Dockerfile</code> ├── 🐳 <code>docker-compose.yml</code> ├── 🔐 <code>.env</code> └── 📄 <code>README.md</code> </code></pre>
+<pre><code>📁<strong>ms_notify_law_office/</strong> 
+  ├── 📂 <strong>app/</strong> │ 
+  ├── 🐍 <code>consumer.py</code> │ 
+  ├── 🐍 <code>producer.py</code> │ └── 📄 <code>requirements.txt</code>
+  ├── 📂 <strong>templates/</strong> │ └── 📄 <code>notification.html</code> ├── 📄 <code>.gitignore</code> ├── 🐳 <code>Dockerfile</code> ├── 🐳 <code>docker-compose.yml</code> ├── 🔐 <code>.env</code> └── 📄 <code>README.md</code> </code></pre>
 
 🛠️ Requisitos
 
