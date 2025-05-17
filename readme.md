@@ -26,19 +26,39 @@ Este microservicio está diseñado para enviar notificaciones por correo electr�
 🔐 Archivo .env
 
 EMAIL=tu_correo@gmail.com
-
 PASSWORD=tu_contraseña_de_aplicacion
-
 RABBITMQ_HOST=rabbitmq
-
 RABBITMQ_PORT=5672
+
+🚀 Guía de Instalación
+Clona el repositorio:
+
+git clone https://github.com/tu_usuario/ms_notify_law_office.git
+cd ms_notify_law_office
+Crea y configura el archivo .env:
+Asegúrate de incluir tus credenciales de correo y configuración de RabbitMQ.
+
+
+EMAIL=tu_correo@gmail.com
+PASSWORD=tu_contraseña_de_aplicacion
+RABBITMQ_HOST=rabbitmq
+RABBITMQ_PORT=5672
+(Opcional) Ejecuta localmente sin Docker:
+Instala dependencias y ejecuta:
+
+
+pip install -r app/requirements.txt
+python app/consumer.py
+Verifica que tienes Docker y Docker Compose instalados:
+
+docker --version
+docker compose version
 
 🐳 Ejecución con Docker
 
 docker compose up --build -d
 
 RabbitMQ GUI en: http://localhost:15672
-
 Usuario: admin, Contraseña: admin
 
 📤 Prueba con Producer
